@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo-Diario-Dev</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="home"></nav>
+    </header>
+    <section>
+        <div class="container"></div>
+        <div class="container"></div>
+        <div class="container"></div>
+        <form accept="submit">
+            <label >Anotacao:</label>
+            <input type="text" name="anotacao" id="anotacao">
+            <label>Data:</label>
+            <input type="date" name="data" id="data">
+            <label>Status:</label>
+            <input type="range" name="status" id="status" min="0" max="1" >
+            <input type="button" value="Gravar" onclick="CadastrarTicket()">Gravar
+        </form>
+    </section>
+    <footer>
+        <a href="">Linkedin</a>
+    </footer>
+    <script src="js/config.js"></script>
+</body>
+</html>
