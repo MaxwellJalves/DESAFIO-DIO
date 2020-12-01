@@ -4,6 +4,18 @@ class Ticket {
             this.data = data;
             this.status = status;
     }
+    validacao(){
+            console.log("Realizando validação")
+
+            for( let i in this ){
+                    if (this[i] == null || this[i] == '' ||this[i] == undefined){
+                        return false;
+                    }else{
+                          
+                     return true;
+                    }
+            }
+    }
 }
 class DbLStorage {
     constructor() {
@@ -23,7 +35,7 @@ class DbLStorage {
 }
 
 function CadastrarTicket() {
-    console.log("entrou")
+
     let anotacao = document.getElementById("anotacao").value;
     let data = document.getElementById("data").value;
     let status = document.getElementById("status").value;
@@ -34,13 +46,32 @@ function CadastrarTicket() {
     }
     console.log(status +data)
     let sup = new Ticket(
-        anotacao,
+            anotacao,
             data,
             status
     );
+    
+    if( sup.validacao() == true){
+        alert("E possivel inserir os registros")
+    }else{
+        $('#ok').modal('show')
+    }
     let db = new  DbLStorage();
-    db.gravar(sup);       
+    db.gravar(sup);  
+    ListarRegistros(anotacao);     
 }
 
+
+function ListarRegistros(id){
+   let db = new  DbLStorage();
+   for(let i=0 ; i <db.getIdRegistro();i++ ){
+        let row = JSON.parse(localStorage.getItem(i));
+        console.log(row)
+        //console.log(`${row.anotacao}  Dia ${row.data}  Status ${row.status}`)
+        //   console.log('Registros localizados' + i + " - " + JSON.parse(localStorage.getItem(i)) );
+   }
+   //     let row = JSON.parse(localStorage.getItem(1))
+  // alert(`${row.anotacao}  Dia ${row.data}  Status ${row.status}`);
+}
 
 

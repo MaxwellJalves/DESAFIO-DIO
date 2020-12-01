@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS</title>
+    <style> 
+	body{
+	 text-align:center;
+	 margin:20px;
+	 padding:10px;
+	}
+	.velocidade{
+	display:flex;
+	
+	flex-diretion:column;
+	justify-content:center;
+	margin:10px;
+	margin-right:5px;
+	width:100%;
+	}
+	h5{
+	color:blue;
+	font-size:20px;
+	}
+    </style>
+</head>
+<body>
+    <h5>Iniciando Bloco</h5>
+    <header>
+        <div class="velocidade">
+        <label for="">Veiculo X com velocidade de km/h :</label>
+            <input type="text" name="velocidade" id="txtVelocidade">
+            <button type="button" onclick="acelerar()">Acelerar</button>
+        </div>
+        <div class="velocidade">
+            <label for="">Veiculo Y com velocidade de km/h:</label>
+
+                <input type="text" name="velocidade" id="txtFreio">
+                <button type="button" onclick="stopRun()">Freiar</button>
+            </div>
+    </header>
+    <script src="app.js"></script>
+</body>
+</html>

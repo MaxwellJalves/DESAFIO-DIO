@@ -2,9 +2,26 @@
  --texto:white;
 }
 body{
-    background-color:black;
+    display:flex;
+    justify-content: center;
+    background-color:rgb(0, 0, 0);
     color:var(--texto);
     font-family: sans-serif;
+}
+a{
+    display: flex;
+    text-decoration: none;
+    color: aliceblue;
+    justify-content: center;
+}
+div.formulario{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50%;
 }
 .container:nth-child(1){
 width: 100%;
@@ -71,4 +88,9 @@ transition-delay: 0.5s;
 }
 footer{
     position: 0;
+}
+
+/*Componentes Formatação*/
+.button{
+    margin-left:20px;
 }
