@@ -36,9 +36,9 @@ class DbLStorage {
 
 function CadastrarTicket() {
 
-    let anotacao = document.getElementById("anotacao").value;
-    let data = document.getElementById("data").value;
-    let status = document.getElementById("status").value;
+    let anotacao = document.getElementById("anotacao");
+    let data = document.getElementById("data");
+    let status = document.getElementById("status");
     if (status == 1) {
             status = 'Concluido';
     } else {
@@ -46,19 +46,26 @@ function CadastrarTicket() {
     }
     console.log(status +data)
     let sup = new Ticket(
-            anotacao,
-            data,
-            status
+            anotacao.value,
+            data.value,
+            status.value
     );
-    
-    if( sup.validacao() == true){
-        alert("E possivel inserir os registros")
-    }else{
-        $('#ok').modal('show')
-    }
     let db = new  DbLStorage();
-    db.gravar(sup);  
-    ListarRegistros(anotacao);     
+
+    console.log(sup.validacao())
+    if( sup.validacao() != true){
+        $('#msgerro').modal('show');
+
+    }else{
+        db.gravar(sup);  
+        ListarRegistros(anotacao.value); 
+        $('#msginserir').modal('show');
+        anotacao.value = "";
+        data.value ="";
+        status.value= 0;
+    }
+    
+    
 }
 
 
