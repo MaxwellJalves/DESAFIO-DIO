@@ -61,7 +61,7 @@ function CadastrarTicket() {
 
 
         if (sup.validacao() != true) {
-                mensagem.innerHTML = "Erro Ao gravar os dados";
+                mensagem.innerHTML = ":( [Erro] ";
                 tp_modal.className = "modal-header text-danger";
                 msg_body.innerHTML = "Ops! Existem campos sem preenchimento.";
                 msg_body.className = "modal-body text-danger";
