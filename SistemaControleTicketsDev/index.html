@@ -29,56 +29,28 @@
                 <input type="button" name="button" value="Gravar" onclick="CadastrarTicket()" class="btn btn-info">
                 <input type="button" name="button" value="Cancelar" onclick="CadastrarTicket()" class="btn btn-danger">
             </form>
-              <!-- Modal Success-->
-
-              <div class="modal fade" id="msginserir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header" text-success>
-                      <h5 class="modal-title text-success" id="exampleModalLabel"><i class="fas fa-check-circle"></i> Registro salvo</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body text-success">
-                      Registro inserido com sucesso.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  Modal Erro-->
-              <div class="modal fade" id="msgerro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header text-danger" >
-                      <h7 class="modal-title" id="exampleModalLabel" > <i class="fas fa-exclamation-triangle"></i> Erro  </h7>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body text-danger">
-                      Existem campos em branco, por favor insira os dados obrigatorios e clique em salvar.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Corrigir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
         </div>
         <a href="consulta.html">Exibir Registros</a>
     </section>
-    
-      
-
-    <footer>
-        <a href=""></a>
-    </footer>
-    
+              <!-- Modal Success-->
+              <div class="modal fade" id="modal-info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div id="modal-title">
+                      <h5 class="modal-title" id="h5"></h5>  <!--<i class="fas fa-check-circle"></i>  Icone-->
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="modal_mensagem">
+                     .
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="modal_button" data-dismiss="modal">Voltar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>      
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script src="js/config.js"></script>
 </body>
