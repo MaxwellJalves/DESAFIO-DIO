@@ -5,8 +5,6 @@ class Ticket {
                 this.status = status;
         }
         validacao() {
-                console.log("Realizando validação")
-
                 for (let i in this) {
                         if (this[i] == null || this[i] == '' || this[i] == undefined) {
                                 return false;
@@ -38,7 +36,8 @@ function CadastrarTicket() {
 
         let anotacao = document.getElementById("anotacao");
         let data = document.getElementById("data");
-        let status = document.getElementById("status");
+        let status = document.getElementById("status").value;
+        console.log(status)
         if (status == 1) {
                 status = 'Concluido';
         } else {
@@ -48,7 +47,8 @@ function CadastrarTicket() {
         let sup = new Ticket(
                 anotacao.value,
                 data.value,
-                status.value
+                status
+
         );
         let db = new DbLStorage();
 
@@ -85,14 +85,24 @@ function CadastrarTicket() {
 }
 
 function ListarRegistros() {
-        // let db = new  DbLStorage();
+        // let db = new  DbLStorage(); //incluir metodo na classe 
+        const lista = new Array();
+        let registros = document.getElementById('listarRegistros');
+
         for (let i = 1; i <= 3; i++) {
                 let row = JSON.parse(localStorage.getItem(i));
-                document.getElementById('cd').innerHTML = row.anotacao;
-                document.getElementById('dt').innerHTML = row.data;
-                document.getElementById('st').innerHTML = row.status;
+                lista.push(row)
         }
+
+        lista.forEach(function (l) {
+                let linha = registros.insertRow();
+                linha.insertCell(0).innerHTML = l.anotacao;
+                linha.insertCell(1).innerHTML = l.data;
+                linha.insertCell(2).innerHTML = l.status;
+                console.log(l)
+        });
+
 }
 
-ListarRegistros()
+
 

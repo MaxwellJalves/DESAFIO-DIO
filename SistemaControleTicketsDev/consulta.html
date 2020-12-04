@@ -6,19 +6,17 @@
     <title>Consulta</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
+<body onload="ListarRegistros()">
   <a href="index.html">Home</a>
- <table class="table" style="margin:20px; width: 80%; text-align:center;">
+ <table class="table" style=" justify-content:center;margin:10%; width: 80%; ">
    <tr>
     <th>Código</th>
     <th>Data</th>
     <th>Status</th>
    </tr>
-   <tr>
-     <td id="cd">1</td>
-     <td id="dt">2</td>
-     <td id="st">3</td>
-   </tr>
+   <tbody id="listarRegistros">
+   </tbody>
+
  </table>
  <script src="js/config.js"></script>
 </body>
