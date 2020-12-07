@@ -1,0 +1,2 @@
+[1203/224215.269:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1204/012906.442:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Maxwell.Costa\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\da14b73a-bb6f-43af-b48b-fbb6306d2168: O sistema não pode encontrar o caminho especificado. (0x3)

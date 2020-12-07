@@ -1,0 +1,28 @@
+body{
+    background-color: #8A2BE2;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(100,100,100,0.5));
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+
+}
+p{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 20px;
+}
+div{
+    display: flex;
+    width: 400px;
+    height:200px;
+}
+.dev{
+    display:flex;
+    justify-content: end;
+}
+
+.component:hover{
+    color:#7FFF00;
+    font-size: 23px bold;
+    
+}
