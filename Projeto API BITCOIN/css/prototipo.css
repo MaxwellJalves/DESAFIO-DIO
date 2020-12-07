@@ -1,6 +1,6 @@
 body{
     background-color: #8A2BE2;
-    background:linear-gradient(rgba(0,0,0,.5),rgba(100,100,100,0.5));
+    background: #1d222c;  /*linear-gradient(rgba(0,0,0,.5),rgba(100,100,100,0.5));*/
     color: whitesmoke;
     font-family: 'Raleway', sans-serif;
 

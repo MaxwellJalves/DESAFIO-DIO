@@ -24,6 +24,7 @@ function insirirElemento(id,empresa,simbolo,rank , data){
 let cabecalho = document.createElement("h2")
 cabecalho.innerText = `${empresa.toLocaleUpperCase()}  - Primeiros Dados Historicos  : ${data}`;
 cabecalho.style.margin = '20px'
+cabecalho.style.color = 'white';
 
 let div = document.createElement("div")
 div.style.display = "column";
